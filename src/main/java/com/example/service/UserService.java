@@ -1,10 +1,9 @@
 package com.example.service;
 
-import com.example.dto.UserCredentialsDto;
-import com.example.entity.UserBO;
-import com.example.entity.UserCredentialsBO;
+import com.example.entity.UserDetailsBO;
+
+import java.util.List;
 
 public interface UserService {
-    public UserCredentialsBO validateuserdetails(UserCredentialsDto loginRequest);
-
+    List<UserDetailsBO> getUsers();
 }

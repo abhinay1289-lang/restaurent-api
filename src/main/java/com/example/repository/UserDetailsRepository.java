@@ -1,7 +1,10 @@
 package com.example.repository;
 
-import com.example.entity.UserBO;
+import com.example.entity.UserDetailsBO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserDetailsRepository extends JpaRepository<UserBO,Integer> {
+import java.util.Optional;
+
+public interface UserDetailsRepository extends JpaRepository<UserDetailsBO,Integer> {
+    Optional<UserDetailsBO> findByEmail(String email);
 }
